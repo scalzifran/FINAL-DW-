@@ -197,10 +197,6 @@ body {
   padding: 5px; /* Espaciado interno */
 }
 
-/* El último ítem no tiene borde derecho */
-.navCategorias li:last-child {
-  border-right: none; /* Sin borde */
-}
 
 .navCategorias a {
   text-decoration: none;
