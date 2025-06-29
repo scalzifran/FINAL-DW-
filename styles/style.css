@@ -172,6 +172,7 @@ body {
   border-radius: 12px; /* Bordes redondeados */
   margin: 20px auto; /* Centrado automático con margen vertical */
   max-width: 800px; /* Máximo ancho del contenedor */
+  text-decoration: none;
 }
 
 /* Lista de ítems de la navegación */
