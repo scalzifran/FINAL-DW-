@@ -1,689 +1,707 @@
+/* Aplica a todos los elementos */
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  box-sizing: border-box; /* Incluye padding y border dentro del ancho y alto del elemento */
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina rellenos por defecto */
+  font-family: sans-serif; /* Usa una fuente sin serifas para todo el sitio */
 }
 
+/* Estilo del body */
 body {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; /* Color de fondo gris claro para toda la página */
 }
 
-/* Header principal STYLES */
+/* ---------- HEADER PRINCIPAL ---------- */
 
+/* Contenedor principal del encabezado */
 .headerPrincipal {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 30px 10px 20px;
-  background: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  gap: 10px;
-  z-index: 300;
+  display: flex; /* Usa flexbox para alinear los hijos horizontalmente */
+  align-items: center; /* Centra verticalmente los elementos hijos */
+  justify-content: space-between; /* Coloca los elementos a los extremos con espacio entre ellos */
+  padding: 10px 30px 10px 20px; /* Espaciado interior: arriba, derecha, abajo, izquierda */
+  background: white; /* Fondo blanco */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra debajo del header */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  gap: 10px; /* Espacio entre los elementos internos */
+  z-index: 300; /* Capa superior para que se vea sobre otros elementos */
 }
 
+/* Estilo del texto del logo */
 .logoNombre {
-  font-weight: bold;
-  font-size: 20px;
-  color: #00bfa6;
+  font-weight: bold; /* Texto en negrita */
+  font-size: 20px; /* Tamaño del texto del logo */
+  color: #00bfa6; /* Color principal del logo */
 }
 
+/* Estilo del span dentro del logo */
 .logoNombre span {
-  color: #ccc;
+  color: #ccc; /* Color gris claro para parte secundaria del logo */
 }
 
+/* ---------- BARRA DE BÚSQUEDA ---------- */
+
+/* Contenedor de la barra de búsqueda */
 .barraBusqueda {
-  flex: 1;
-  display: flex;
-  margin: 0 20px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  overflow: hidden;
-  background: #fff;
+  flex: 1; /* Ocupa el espacio restante entre el logo y el área de usuario */
+  display: flex; /* Organiza el input y el botón horizontalmente */
+  margin: 0 20px; /* Margen horizontal */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 20px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta el desbordamiento del contenido */
+  background: #fff; /* Fondo blanco */
 }
 
+/* Estilo del input de búsqueda */
 .barraBusqueda input {
-  flex: 1;
-  border: none;
-  padding: 8px 12px;
-  outline: none;
+  flex: 1; /* Ocupa todo el espacio posible dentro del contenedor */
+  border: none; /* Sin bordes */
+  padding: 8px 12px; /* Espaciado interno */
+  outline: none; /* Elimina el borde azul al seleccionar */
 }
 
+/* Estilo del botón de búsqueda */
 .barraBusqueda button {
-  background: none;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  padding: 8px 12px; /* Espaciado interno para el botón */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
 }
 
+/* Estilo de la imagen del botón (lupa) */
 .barraBusqueda button img {
-  width: 16px;
+  width: 16px; /* Tamaño de la imagen */
 }
 
+/* ---------- ÁREA DE USUARIO ---------- */
+
+/* Contenedor del carrito y perfil */
 .areaUsuario {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: flex; /* Organiza los elementos en fila */
+  align-items: center; /* Centra verticalmente los elementos */
+  gap: 10px; /* Espacio entre íconos */
 }
 
+/* Contenedor del icono del carrito */
 .carritoHeader {
-  width: 40px;
-  height: 40px;
-  background: #333;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* centra horizontal y verticalmente */
+  width: 40px; /* Ancho del círculo */
+  height: 40px; /* Alto del círculo */
+  background: #333; /* Fondo gris oscuro */
+  border-radius: 50%; /* Hace el contenedor redondo */
+  display: flex; /* Centra el ícono */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
 }
 
+/* Estilo general para íconos */
 .icon {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0) invert(1); /* icono blanco */
+  width: 24px; /* Ancho del ícono */
+  height: 24px; /* Alto del ícono */
+  filter: brightness(0) invert(1); /* Convierte íconos negros en blancos */
 }
 
+/* Contenedor del perfil del usuario */
 .perfil {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background: #333;
-  color: white;
-  border-radius: 20px;
-  padding: 5px 10px;
+  display: flex; /* Acomoda ícono y texto en fila */
+  align-items: center; /* Centrado vertical */
+  gap: 5px; /* Espacio entre avatar y nombre */
+  background: #333; /* Fondo gris oscuro */
+  color: white; /* Texto en blanco */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 5px 10px; /* Espaciado interno */
 }
 
+/* Estilo del avatar del perfil */
 .avatar {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  filter: brightness(0) invert(1); /* convierte de negro a blanco */
+  width: 24px; /* Tamaño del avatar */
+  height: 24px; /* Tamaño del avatar */
+  border-radius: 50%; /* Forma redonda */
+  filter: brightness(0) invert(1); /* Ícono blanco */
 }
 
+/* Estilo para enlaces (aunque esta clase está vacía) */
 .a {
-  text-decoration: none;
+  text-decoration: none; /* Quita el subrayado de los enlaces */
 }
 
-/* Footer STYLES */
+/* ---------- FOOTER PRINCIPAL ---------- */
 
+/* Contenedor del pie de página */
 .footerPrincipal {
-  width: 100%;
-  background: #f1f1f1;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #666;
-  font-size: 14px;
-  margin-top: 40px;
-  box-shadow: 0 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ocupa todo el ancho */
+  background: #f1f1f1; /* Fondo gris claro */
+  padding: 15px 20px; /* Espaciado interno */
+  display: flex; /* Elementos en fila */
+  align-items: center; /* Centrado vertical */
+  justify-content: space-between; /* Separación entre elementos */
+  color: #666; /* Color de texto gris medio */
+  font-size: 14px; /* Tamaño de letra pequeño */
+  margin-top: 40px; /* Separación del contenido anterior */
+  box-shadow: 0 4px rgba(0, 0, 0, 0.1); /* Sombra superior */
 }
 
+/* Estilo de íconos de redes y apps */
 .redesIconos img,
 .appLinks img {
-  width: 20px;
-  margin: 0 5px;
-  opacity: 0.6;
-  transition: 0.3s;
+  width: 20px; /* Tamaño de íconos */
+  margin: 0 5px; /* Margen horizontal entre íconos */
+  opacity: 0.6; /* Opacidad reducida */
+  transition: 0.3s; /* Transición suave al hacer hover */
 }
 
+/* Efecto hover en los íconos */
 .redesIconos img:hover,
 .appLinks img:hover {
-  opacity: 1;
-  cursor: pointer;
+  opacity: 1; /* Opacidad total al pasar el mouse */
+  cursor: pointer; /* Cambia el cursor */
 }
 
+/* Estilo del texto centrado en el footer */
 .footerPrincipal p {
-  margin: 0;
-  text-align: center;
-  flex: 1;
+  margin: 0; /* Sin margen */
+  text-align: center; /* Texto centrado */
+  flex: 1; /* Ocupa todo el espacio disponible */
 }
 
-/* NAV STYLES */
+/* ---------- NAVEGACIÓN DE CATEGORÍAS ---------- */
 
+/* Contenedor de la navegación */
 .navCategorias {
-  margin: 100px;
-  background: #333;
-  padding: 10px 20px;
-  border-radius: 12px;
-  margin: 20px auto;
-  max-width: 800px;
+  margin: 100px; /* Margen amplio (ajustable en móviles) */
+  background: #333; /* Fondo oscuro */
+  padding: 10px 20px; /* Espaciado interno */
+  border-radius: 12px; /* Bordes redondeados */
+  margin: 20px auto; /* Centrado automático con margen vertical */
+  max-width: 800px; /* Máximo ancho del contenedor */
 }
 
+/* Lista de ítems de la navegación */
 .navCategorias ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  display: flex; /* Ítems en fila */
+  justify-content: space-between; /* Espacio entre ítems */
+  align-items: center; /* Centrado vertical */
+  list-style: none; /* Quita los puntos de la lista */
+  padding: 0; /* Sin padding */
+  margin: 0; /* Sin margen */
 }
 
+/* Cada ítem de la navegación */
 .navCategorias li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 1;
-  color: white;
-  text-align: center;
-  font-size: 12px;
-  border-right: 2px solid #fff;
-  padding: 5px;
+  display: flex; /* Contenido en columna */
+  flex-direction: column; /* Ícono arriba, texto abajo */
+  align-items: center; /* Centrado horizontal */
+  flex: 1; /* Ocupan el mismo espacio */
+  color: white; /* Texto blanco */
+  text-align: center; /* Texto centrado */
+  font-size: 12px; /* Tamaño de letra pequeño */
+  border-right: 2px solid #fff; /* Borde derecho entre ítems */
+  padding: 5px; /* Espaciado interno */
 }
 
+/* El último ítem no tiene borde derecho */
 .navCategorias li:last-child {
-  border-right: none;
+  border-right: none; /* Sin borde */
 }
 
+/* Estilo de los íconos dentro de la navegación */
 .navCategorias img {
-  width: 30px;
-  height: 30px;
-  margin-bottom: 5px;
-  filter: brightness(0) invert(1); /* convierte de negro a blanco */
+  width: 30px; /* Ancho del ícono */
+  height: 30px; /* Alto del ícono */
+  margin-bottom: 5px; /* Espacio debajo del ícono */
+  filter: brightness(0) invert(1); /* Íconos en blanco */
 }
 
-/* Promo STYLES */
+
+/* ---------- PROMOS ---------- */
 
 .background {
-  width: 100%;
-  height: 90%;
-  background: #40E0D0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  top: 35px;
-  z-index: 1;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 90%; /* Ocupa el 90% de la altura del contenedor padre */
+  background: #40E0D0; /* Color de fondo turquesa */
+  position: absolute; /* Posicionamiento absoluto para ubicarse respecto a su contenedor padre */
+  top: 0; /* Alineado arriba */
+  left: 0; /* Alineado a la izquierda */
+  top: 35px; /* Esto sobrescribe el top:0, lo pone a 35px desde arriba */
+  z-index: 1; /* Controla la superposición, aparece detrás de elementos con z-index mayor */
 }
 
 .promos {
-  position: relative;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap; /* hace que las tarjetas se hagan mas chiquitas en movile */
+  position: relative; /* Permite que los hijos con position absolute se posicionen respecto a este */
+  padding: 20px; /* Espacio interno de 20px en todos lados */
+  display: flex; /* Contenedor flex para ordenar hijos en fila */
+  justify-content: center; /* Centra los hijos horizontalmente */
+  gap: 20px; /* Separación de 20px entre hijos */
+  flex-wrap: wrap; /* Permite que los hijos bajen a otra fila en pantallas pequeñas */
 }
 
 .promoTarjeta {
-  position: relative;
-  width: 400px; /* Cambiar a 100% en móviles */
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  z-index: 100;
+  position: relative; /* Para posicionar elementos hijos relativos a esta tarjeta */
+  width: 400px; /* Ancho fijo de 400px (se recomienda cambiar a 100% en móvil) */
+  border-radius: 16px; /* Bordes redondeados */
+  overflow: hidden; /* Recorta contenido que sobresalga del borde */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra debajo para dar profundidad */
+  z-index: 100; /* Se superpone sobre elementos con menor z-index */
 }
 
 .promoTarjeta img {
-  width: 100%;
-  display: block;
+  width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+  display: block; /* Elimina espacios blancos debajo de la imagen */
 }
 
 .promoTexto {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: white;
-  text-shadow: 0 1px 2px #000;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 10px 20% 10px 10px;
-  border-radius: 10px;
-  max-width: 100%;
-  max-height: 60%;
+  position: absolute; /* Texto encima de la imagen, en posición absoluta */
+  bottom: 10px; /* Separado 10px del borde inferior de la tarjeta */
+  left: 10px; /* Separado 10px del borde izquierdo */
+  color: white; /* Texto blanco */
+  text-shadow: 0 1px 2px #000; /* Sombra para que el texto se lea mejor sobre la imagen */
+  background: rgba(0, 0, 0, 0.4); /* Fondo negro transparente para destacar texto */
+  padding: 10px 20% 10px 10px; /* Relleno arriba, derecha (20%), abajo, izquierda */
+  border-radius: 10px; /* Bordes redondeados en el fondo del texto */
+  max-width: 100%; /* No se desborde horizontalmente */
+  max-height: 60%; /* Altura máxima para que no ocupe mucho espacio */
 }
 
 .promoTexto img {
-  width: 50px;
-  margin-bottom: 5px;
+  width: 50px; /* Imagen pequeña dentro del texto */
+  margin-bottom: 5px; /* Margen abajo para separar del texto */
 }
 
-/* Productos STYLES */
+/* ---------- Productos---------- */
 
 .contenidoPrincipal {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  padding: 20px; /* Espacio interno de 20px */
+  display: flex; /* Contenedor flex */
+  flex-direction: column; /* Los hijos se ordenan en columna */
+  gap: 40px; /* Separación de 40px entre hijos */
 }
 
 .section h3 {
-  margin-bottom: 10px;
-  font-size: 14px;
-  color: #333;
+  margin-bottom: 10px; /* Margen debajo para separar del contenido */
+  font-size: 14px; /* Tamaño de letra pequeño */
+  color: #333; /* Color gris oscuro para texto */
 }
 
 .productos {
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  gap: 12px;
+  display: flex; /* Contenedor flex */
+  flex-wrap: wrap; /* Los productos bajan a otra fila si no entran en una */
+  align-content: center; /* Centra el contenido verticalmente si hay varias filas */
+  gap: 12px; /* Separación de 12px entre productos */
 }
 
 .productoTarjeta {
-  width: 250px; /* Cambiar a 100% en móviles */
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  padding: 8px;
-  gap: 8px;
-  transition: transform 0.2s ease;
+  width: 250px; /* Ancho fijo de 250px (recomendado cambiar a 100% en móviles) */
+  background: #fff; /* Fondo blanco */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra leve para profundidad */
+  overflow: hidden; /* Oculta contenido que sobresalga */
+  display: flex; /* Contenedor flex */
+  flex-direction: column; /* Los hijos se ordenan en columna */
+  padding: 8px; /* Espacio interno de 8px */
+  gap: 8px; /* Separación entre hijos */
+  transition: transform 0.2s ease; /* Transición suave para transformaciones */
 }
 
 .productoTarjeta:hover {
-  transform: scale(1.02);
+  transform: scale(1.02); /* Agranda un poco la tarjeta al pasar el mouse */
 }
 
 .productoTarjeta img {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 8px;
+  width: 100%; /* Imagen ocupa todo el ancho de la tarjeta */
+  object-fit: cover; /* La imagen se recorta para llenar el contenedor */
+  border-radius: 8px; /* Bordes redondeados en la imagen */
 }
 
 .productoInfo {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  font-size: 12px;
+  display: flex; /* Contenedor flex */
+  justify-content: space-between; /* Espacio entre los hijos (nombre y precio) */
+  align-items: flex-start; /* Alinea hijos arriba */
+  font-size: 12px; /* Tamaño pequeño de texto */
 }
 
 .productoNombre {
-  font-weight: bold;
-  font-size: 12px;
-  color: #000;
-  flex: 1;
-  padding-right: 10px;
+  font-weight: bold; /* Texto en negrita */
+  font-size: 12px; /* Tamaño pequeño */
+  color: #000; /* Texto negro */
+  flex: 1; /* Ocupa todo el espacio disponible */
+  padding-right: 10px; /* Espacio a la derecha para separar del precio */
 }
 
 .productoPrecio {
-  text-align: right;
-  font-size: 11px;
-  color: #333;
+  text-align: right; /* Texto alineado a la derecha */
+  font-size: 11px; /* Tamaño muy pequeño */
+  color: #333; /* Gris oscuro */
 }
 
 .productoPrecio .precio {
-  font-weight: bold;
-  font-size: 13px;
-  color: #111;
-  margin: 0;
+  font-weight: bold; /* Negrita para el precio */
+  font-size: 13px; /* Tamaño un poco más grande */
+  color: #111; /* Negro casi puro */
+  margin: 0; /* Sin margen */
 }
 
 .productoPrecio .label {
-  font-size: 10px;
-  color: #777;
+  font-size: 10px; /* Texto muy pequeño */
+  color: #777; /* Gris claro */
 }
 
 .btnVerProducto {
-  margin-top: auto;
-  padding: 6px;
-  background: #333;
-  color: white;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 8px;
-  font-size: 12px;
-  transition: ease 0.2s ease;
+  margin-top: auto; /* Empuja el botón al fondo del contenedor */
+  padding: 6px; /* Espacio interno pequeño */
+  background: #333; /* Fondo gris oscuro */
+  color: white; /* Texto blanco */
+  text-align: center; /* Centrar texto */
+  text-decoration: none; /* Sin subrayado */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 12px; /* Texto pequeño */
+  transition: ease 0.2s ease; /* Transición para hover */
 }
 
 .btnVerProducto:hover {
-  background: #555;
+  background: #555; /* Cambia el fondo a gris más claro al pasar mouse */
 }
 
-/* LOGIN REGISTER */
+/* ---------- Login y register ---------- */
 
 .headerLogeo {
-  padding: 20px;
-  z-index: 100;
+  padding: 20px; /* Espacio interno */
+  z-index: 100; /* Para estar encima de otros elementos */
 }
 
 .principalLogeo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 70vh;
+  display: flex; /* Contenedor flex */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  min-height: 70vh; /* Altura mínima 70% de la pantalla */
 }
 
 .contenedorLogeo {
-  background-color: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  text-align: center;
-  z-index: 100;
+  background-color: white; /* Fondo blanco */
+  padding: 30px; /* Espacio interno */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  width: 300px; /* Ancho fijo */
+  text-align: center; /* Texto centrado */
+  z-index: 100; /* Encima de otros elementos */
 }
 
 .contenedorLogeo h1 {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Margen debajo para separar */
 }
 
 .contenedorLogeo form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: flex; /* Flex para ordenar inputs */
+  flex-direction: column; /* En columna */
+  gap: 10px; /* Espacio entre inputs */
 }
 
 .contenedorLogeo input {
-  padding: 10px;
-  border-radius: 20px;
-  border: 1px solid #ccc;
+  padding: 10px; /* Espacio interno */
+  border-radius: 20px; /* Bordes redondeados */
+  border: 1px solid #ccc; /* Borde gris */
 }
 
 .btnLogeo {
-  display: block;
-  text-align: center;
-  padding: 10px;
-  border-radius: 20px;
-  background-color: #555;
-  text-decoration: none;
-  margin-top: 10px;
+  display: block; /* Para que ocupe todo el ancho posible */
+  text-align: center; /* Centrar texto */
+  padding: 10px; /* Espacio interno */
+  border-radius: 20px; /* Bordes redondeados */
+  background-color: #555; /* Fondo gris oscuro */
+  text-decoration: none; /* Sin subrayado */
+  margin-top: 10px; /* Separación arriba */
 }
 
 .contenedorLogeo p {
-  margin-top: 15px;
-  font-size: 14px;
+  margin-top: 15px; /* Separación arriba */
+  font-size: 14px; /* Texto mediano */
 }
 
 .contenedorLogeo a {
-  color: #000;
-  text-decoration: none;
-  font-weight: bold;
+  color: #000; /* Color negro */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: bold; /* Negrita */
 }
 
 .principalLogeo {
-  position: relative;
+  position: relative; /* Para controlar elementos con posicion absolute dentro */
 }
 
 .backgroundLogeo {
-  width: 100%;
-  height: 55%;
-  background: #40E0D0;
-  border-top: 0.5px solid #777;
-  position: absolute;
-  top: -15px;
-  left: 0;
-  z-index: 1;
+  width: 100%; /* Ancho total */
+  height: 55%; /* Alto 55% */
+  background: #40E0D0; /* Fondo turquesa */
+  border-top: 0.5px solid #777; /* Línea superior gris */
+  position: absolute; /* Posición absoluta */
+  top: -15px; /* Posicionado 15px arriba del contenedor */
+  left: 0; /* Alineado a la izquierda */
+  z-index: 1; /* Por debajo de elementos con z-index mayor */
 }
 
 .footerLogeo {
-  position: fixed;
-  bottom: 0;
+  position: fixed; /* Fijo en pantalla */
+  bottom: 0; /* Pegado al borde inferior */
 }
+
 
 /* -----------------------CART STYLES--------------------------------- */
 
 .contenedorCarrito {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-  font-family: sans-serif;
+  max-width: 800px; /* Ancho máximo de 800px para el contenedor del carrito */
+  margin: auto; /* Centra horizontalmente con margen automático */
+  padding: 20px; /* Espacio interno de 20px por todos lados */
+  font-family: sans-serif; /* Fuente sans-serif para todo el texto dentro */
 }
 
 .volverLink {
-  display: inline-block;
-  margin-bottom: 20px;
-  text-decoration: none;
-  color: #000;
+  display: inline-block; /* Se comporta como un inline pero acepta ancho y alto */
+  margin-bottom: 20px; /* Separación debajo de 20px */
+  text-decoration: none; /* Sin subrayado */
+  color: #000; /* Color negro para el texto */
 }
 
 .contenedorCarrito h2 {
-  margin-bottom: 20px;
+  margin-bottom: 20px; /* Margen debajo para separar del contenido siguiente */
 }
 
 /* Items del carrito */
 
 .itemsCarrito {
-  display: flex;
-  align-items: center;
-  background: #f9f9f9;
-  padding: 15px;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: flex; /* Contenedor flexible para alinear elementos en fila */
+  align-items: center; /* Alinea verticalmente al centro */
+  background: #f9f9f9; /* Fondo gris muy claro */
+  padding: 15px; /* Espacio interno de 15px */
+  margin-bottom: 15px; /* Margen debajo para separar cada item */
+  border-radius: 10px; /* Bordes redondeados de 10px */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra muy suave para dar profundidad */
 }
 
 .itemsCarrito img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 5px;
-  margin-right: 15px;
+  width: 60px; /* Ancho fijo de 60px para la imagen */
+  height: 60px; /* Alto fijo de 60px para la imagen */
+  object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformar */
+  border-radius: 5px; /* Bordes ligeramente redondeados */
+  margin-right: 15px; /* Separación a la derecha de 15px respecto al texto */
 }
 
 .itemInfo {
-  flex: 1;
+  flex: 1; /* Ocupa todo el espacio restante disponible */
 }
 
 .itemNombre {
-  font-weight: bold;
-  margin: 0 0 10px;
+  font-weight: bold; /* Texto en negrita */
+  margin: 0 0 10px; /* Sin margen arriba ni lateral, 10px abajo */
 }
 
 .itemAccion {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  display: flex; /* Contenedor flex para ordenar botones o controles */
+  align-items: center; /* Alinea verticalmente */
+  gap: 15px; /* Separación de 15px entre elementos */
 }
 
 .itemPrecio {
-  font-weight: bold;
-  font-size: 16px;
+  font-weight: bold; /* Precio en negrita */
+  font-size: 16px; /* Tamaño de fuente un poco más grande */
 }
 
 .btnQuitar {
-  background: #333;
-  color: white;
-  border: none;
-  padding: 5px 12px;
-  border-radius: 20px;
-  cursor: pointer;
+  background: #333; /* Fondo gris oscuro */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 5px 12px; /* Espacio interno vertical y horizontal */
+  border-radius: 20px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor mano para indicar que es clickeable */
 }
 
 .cantidad {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  padding: 3px 8px;
+  display: flex; /* Contenedor flex para los botones y el número */
+  align-items: center; /* Alinea verticalmente */
+  gap: 5px; /* Separación entre botones y número */
+  border: 1px solid #ccc; /* Borde gris claro */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 3px 8px; /* Espacio interno para que no quede apretado */
 }
 
 .cantidad button {
-  background: none;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  font-size: 16px; /* Tamaño grande para el símbolo + o - */
+  cursor: pointer; /* Cursor mano para click */
 }
 
 /* FINAL DEL CARRITO */
 
 .precio {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: 30px;
+  display: flex; /* Contenedor flex */
+  justify-content: space-between; /* Separa los elementos a los extremos */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 20px; /* Tamaño grande */
+  margin-top: 30px; /* Margen arriba para separarlo del contenido */
 }
 
 .precioTotal {
-  color: #000;
+  color: #000; /* Texto negro */
 }
 
 .btnPagar {
-  background: #333;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  float: right;
-  margin-top: 20px;
-  cursor: pointer;
+  background: #333; /* Fondo gris oscuro */
+  color: white; /* Texto blanco */
+  padding: 10px 20px; /* Espacio interno para que sea cómodo */
+  border: none; /* Sin borde */
+  border-radius: 20px; /* Bordes redondeados */
+  float: right; /* Flota a la derecha del contenedor */
+  margin-top: 20px; /* Margen arriba para separarlo */
+  cursor: pointer; /* Cursor mano para indicar clic */
 }
 
 /* PRODUCTO */
 
 .boxVolver {
-  width: auto;
-  height: auto;
-  padding: 20px 20px;
+  width: auto; /* Ancho automático según contenido */
+  height: auto; /* Alto automático */
+  padding: 20px 20px; /* Espacio interno arriba, abajo, izquierda y derecha */
 }
 
 .volver {
-  text-decoration: none;
-  color: none;
-  color: #000;
+  text-decoration: none; /* Sin subrayado */
+  color: none; /* No tiene color definido explícitamente */
+  color: #000; /* Color negro (la línea anterior no tiene efecto) */
 }
 
 .productoPagina {
-  display: flex;
-  gap: 30px;
-  padding: 40px;
-  max-width: 700px;
-  margin: auto;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex; /* Contenedor flex para ordenar hijos en fila */
+  gap: 30px; /* Separación entre imagen y texto */
+  padding: 40px; /* Espacio interno de 40px */
+  max-width: 700px; /* Ancho máximo de 700px */
+  margin: auto; /* Centra horizontalmente */
+  background: white; /* Fondo blanco */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve para profundidad */
 }
 
 .productoImagenes {
-  flex: 1;
+  flex: 1; /* Ocupa el espacio disponible */
 }
 
 .imgPrincipal {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  width: 100%; /* La imagen principal ocupa todo el ancho disponible */
+  border-radius: 8px; /* Bordes redondeados */
+  margin-bottom: 10px; /* Margen debajo para separar de miniaturas */
 }
 
 .miniaturas {
-  display: flex;
-  gap: 10px;
+  display: flex; /* Contenedor flex para miniaturas */
+  gap: 10px; /* Separación entre miniaturas */
 }
 
 .miniaturas img {
-  width: 60px;
-  height: 60px;
-  object-fit: cover;
-  border-radius: 6px;
-  cursor: pointer;
+  width: 60px; /* Ancho fijo para miniaturas */
+  height: 60px; /* Alto fijo para miniaturas */
+  object-fit: cover; /* Ajusta la imagen recortando para llenar espacio */
+  border-radius: 6px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia cursor al pasar por encima */
 }
 
 .productInfo {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  flex: 1; /* Ocupa el espacio disponible */
+  display: flex; /* Contenedor flex */
+  flex-direction: column; /* Ordena hijos en columna */
+  gap: 15px; /* Separación entre elementos */
 }
 
 .productInfo h2 {
-  margin: 0;
+  margin: 0; /* Sin margen para que quede ajustado arriba */
 }
 
 .productPrecio {
-  font-size: 22px;
+  font-size: 22px; /* Texto grande para el precio */
 }
 
 .productInfo a {
-  padding: 10px;
-  background: #333;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
+  padding: 10px; /* Espacio interno cómodo */
+  background: #333; /* Fondo gris oscuro */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor de mano para clic */
+  text-align: center; /* Centra el texto */
+  text-decoration: none; /* Sin subrayado */
 }
 
 .descripcion {
-  font-size: 14px;
-  color: #555;
+  font-size: 14px; /* Tamaño de letra mediano */
+  color: #555; /* Color gris oscuro */
 }
 
 /* Media Queries para Responsividad */
 
 /* Estilos para móviles */
 
-
 @media (max-width: 768px) {
   .headerPrincipal {
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 10px 15px;
+    display: flex; /* Contenedor flex */
+    flex-direction: row; /* Los elementos se ordenan en fila */
+    align-items: center; /* Alineación vertical al centro */
+    justify-content: space-between; /* Espacio entre los extremos */
+    gap: 10px; /* Separación entre elementos */
+    padding: 10px 15px; /* Espacio interno más reducido */
   }
 
   .logoNombre {
-    font-size: 20px;
-    white-space: nowrap;
+    font-size: 20px; /* Tamaño de texto mediano */
+    white-space: nowrap; /* Evita que el texto se corte en varias líneas */
   }
 
   .logoNombre .ocultar, .perfil span {
-    display: none; 
+    display: none; /* Oculta elementos con clase ocultar y spans en perfil */
   }
 
-  
-
-
-
-  .navCategorias{
-    margin: 20px;
+  .navCategorias {
+    margin: 20px; /* Margen alrededor */
   }
 
- .navCategorias ul {
-    display: block;
-    padding: 0;
-    margin: 0;
+  .navCategorias ul {
+    display: block; /* Cambia la lista a bloque (de flex a bloque) */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
   }
 
   .navCategorias li {
-    display: flex;
-    flex-direction: row; 
-    align-items: center;
-    gap: 8px;
-    padding: 8px 12px;
-    border: none;
-    font-size: 16px; 
+    display: flex; /* Contenedor flex */
+    flex-direction: row; /* Ordena en fila */
+    align-items: center; /* Alineación vertical */
+    gap: 8px; /* Separación entre ítems */
+    padding: 8px 12px; /* Espacio interno */
+    border: none; /* Sin borde */
+    font-size: 16px; /* Texto más grande para móvil */
   }
 
   .navCategorias li img {
-    width: 24px;
-    height: 24px;
+    width: 24px; /* Tamaño imagen reducido */
+    height: 24px; /* Alto reducido */
   }
 
-
-
-
-
-
-
   .productos, .promos {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Cambia a columna para que sean verticales */
+    align-items: center; /* Centra horizontalmente */
   }
 
   .productoTarjeta, .promoTarjeta {
-    width: 100%;
-    max-width: 100%;
+    width: 100%; /* Ocupa todo el ancho posible */
+    max-width: 100%; /* Máximo ancho también 100% */
   }
 
   .contenedorCarrito, .productoPagina {
-    padding: 10px;
-    flex-direction: column;
+    padding: 10px; /* Espacio interno más chico para móviles */
+    flex-direction: column; /* Cambian a columna para adaptar */
   }
 
   .itemsCarrito {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Items del carrito en columna */
+    align-items: flex-start; /* Alinea a la izquierda */
   }
 
   .footerPrincipal {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 10px;
+    flex-direction: column; /* Footer en columna */
+    align-items: center; /* Centra contenido */
+    text-align: center; /* Texto centrado */
+    gap: 10px; /* Separación entre elementos */
   }
 }
-
