@@ -190,16 +190,21 @@ body {
   flex-direction: column; /* Ícono arriba, texto abajo */
   align-items: center; /* Centrado horizontal */
   flex: 1; /* Ocupan el mismo espacio */
-  color: white; /* Texto blanco */
   text-align: center; /* Texto centrado */
   font-size: 12px; /* Tamaño de letra pequeño */
   border-right: 2px solid #fff; /* Borde derecho entre ítems */
   padding: 5px; /* Espaciado interno */
 }
 
+/* El último ítem no tiene borde derecho */
+.navCategorias li:last-child {
+  border-right: none; /* Sin borde */
+}
+
 
 .navCategorias a {
-  text-decoration: none;
+  text-decoration: none;/* Quitar border de abajo */
+  color: white; /* Texto blanco */
 }
 
 /* Estilo de los íconos dentro de la navegación */
