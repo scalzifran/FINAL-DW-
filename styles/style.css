@@ -185,7 +185,7 @@ body {
 }
 
 /* Cada ítem de la navegación */
-.navCategorias li {
+.navCategorias a {
   display: flex; /* Contenido en columna */
   flex-direction: column; /* Ícono arriba, texto abajo */
   align-items: center; /* Centrado horizontal */
