@@ -182,7 +182,6 @@ body {
   list-style: none; /* Quita los puntos de la lista */
   padding: 0; /* Sin padding */
   margin: 0; /* Sin margen */
-  text-decoration: none;
 }
 
 /* Cada ítem de la navegación */
@@ -198,7 +197,9 @@ body {
   padding: 5px; /* Espaciado interno */
 }
 
-
+.navCategorias a {
+  text-decoration: none;
+}
 
 /* Estilo de los íconos dentro de la navegación */
 .navCategorias img {
